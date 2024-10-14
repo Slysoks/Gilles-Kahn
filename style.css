@@ -13,6 +13,10 @@ body {
   padding: 0;
 }
 
+.side-image {
+  width: 400px;
+}
+
 h1 {
   text-align: center;
 }
