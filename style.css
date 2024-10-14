@@ -1,0 +1,25 @@
+:root {
+  --black: #1e1b18;
+  --white: #f0f0f0;
+  --blue: #0a2463;
+  --cyan: #3e92cc;
+  --red: #d8315b;
+}
+
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
