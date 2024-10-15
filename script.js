@@ -1,17 +1,36 @@
-const image = document.getElementById('image');
+const fetchData = async () => {
+  const response = await fetch('./info.json');
+  const data = await response.json();
+  return data;
+};
 
-image.addEventListener('mousemove', (e) => {
-  // Rotate the image according to the position of the mouse on the image
-  const ratio = 50;
-  const { offsetX, offsetY } = e;
-  const { width, height } = image;
-  const x = (offsetX / width) * ratio - ratio/2;
-  const y = (offsetY / height) * ratio - ratio/2;
-  console.log(x, y);
-  image.style.transform = `rotateX(${y}deg) rotateY(${x}deg)`;
-});
+const renderData = async (data) => {
+  const main = document.querySelector('main');
+  data.forEach((item) => {
+    const section = document.createElement('section');
+    section.innerHTML = `
+      <div class="imageWrapper">
+        <img src="${item.image}" alt="${item.name}" class="sideImage" />
+      </div>
+      <div class="description">
+        <div>
+          <h2>
+            ${item.title}
+          </h2>
+          <p>
+            ${item.content}
+          </p>
+        </div>
+      </div>
+    `;
+    main.appendChild(section);
+  });
+}
 
-image.addEventListener('mouseleave', () => {
-  // Reset the rotation of the image
-  image.style.transform = 'rotateX(0deg) rotateY(0deg)';
-});
+const main = async () => {
+  const data = await fetchData();
+  console.log(data);
+  renderData(data);
+};
+
+main();
