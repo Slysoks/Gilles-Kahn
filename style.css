@@ -54,18 +54,19 @@ main {
   max-width: 40em;
   margin: 5em auto;
   height: auto;
-  animation: timeline 1s ease-out;
   transform: translateY(5em);
 
   &::before {
     content: '';
-    background-color: var(--gray);
-    width: 3px;
-    height: 100%;
+    background-color: var(--white);
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    filter: drop-shadow(0 0 0.5em var(--white));
   }
 }
 
@@ -78,6 +79,12 @@ main {
     border: 2px solid var(--gray);
     border-radius: var(--border-radius);
     padding: 1.5em;
+    box-shadow: none;
+    transition: box-shadow 0.3s ease-out;
+
+    &:hover {
+      box-shadow: 0 0 1em 10px var(--gray);
+    }
 
     > h2 {
       margin-bottom: 1em;
@@ -109,6 +116,7 @@ main {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    animation: widthLinkChange 1s ease-out;
   }
 
   &:nth-child(odd)::before {
@@ -117,6 +125,32 @@ main {
 
   &:nth-child(even)::before {
     right: 0;
+  }
+
+  &:nth-child(odd)::after,
+  &:nth-child(even)::after {
+    content: '';
+    background-color: var(--white);
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    opacity: .8;
+    position: absolute;
+    top: 50%;
+    animation: dotScale 1s ease-out;
+    animation: dotAnimation 2s infinite;
+  }
+
+  &:nth-child(odd)::after {
+    left: 0;
+    transform: translate(-50%, -50%);
+    transform-origin: left center;
+  }
+
+  &:nth-child(even)::after {
+    right: 0;
+    transform: translate(50%, -50%);
+    transform-origin: right center;
   }
 }
 
@@ -130,35 +164,29 @@ footer {
 
 /* Keyframes */
 
-@keyframes timeline {
+@keyframes widthLinkChange {
   0% {
-    opacity: 0;
-    scale: 0.9;
-    height: 0;
-    transform: translateY(-5em);
+    width: 0;
   }
   100% {
-    opacity: 1;
-    scale: 1;
-    transform: translateY(5em);
+    width: 3em;
   }
 }
 
-@keyframes beginingPoint {
-  0% {
-    opacity: 0;
-    scale: 0.9;
-    height: 0;
-    transform: translateY(-5em);
+@keyframes dotScale {
+  0%, 100% {
+    scale: 1;
+  }
+  60% {
+    scale: 1.5;
+  }
+}
+
+@keyframes dotAnimation {
+  0%, 100% {
+    filter: drop-shadow(0 0 0.5em var(--white));
   }
   50% {
-    height: 2em;
-    background: conic-gradient(from 0deg, #FFFFFFFF 0%, #FFFFFF00 0%);
-  }
-  100% {
-    opacity: 1;
-    scale: 1;
-    transform: translateY(5em);
-    background: conic-gradient(from 0deg, #FFFFFFFF 0%, #FFFFFFFF 1000%);
+    filter: drop-shadow(0 0 0.5em var(--black));
   }
 }

@@ -1,9 +1,22 @@
 [
   {
     "title": "Le d&eacute;but",
-    "content": "Gilles KAHN est n&eacute; le 22 d&eacute;cembre 1946 &agrave; Paris. Il est le fils de Jean KAHN, professeur de math&eacute;matiques, et de Marie-Louise KAHN, n&eacute;e BONNET. Il a un fr&egrave;re, Jean-Louis, et une s&oelig;ur, Marie-Claude. Il est mari&eacute; &agrave; Marie-France KAHN, n&eacute;e BONNET, et a deux enfants, Jean et Marie.",
-    "image": "./img/1.jpg",
-    "name": "Gilles Maths",
-    "icon": "./img/1.jpg"
+    "content": "Gilles KAHN est n&eacute; le 22 d&eacute;cembre 1946 &agrave; Paris. Il est le fils de Jean KAHN, professeur de math&eacute;matiques, et de Marie-Louise KAHN, n&eacute;e BONNET. Il a un fr&egrave;re, Jean-Louis, et une s&oelig;ur, Marie-Claude. Il est mari&eacute; &agrave; Marie-France KAHN, n&eacute;e BONNET, et a deux enfants, Jean et Marie."
+  },
+  {
+    "title": "Les &eacute;tudes",
+    "content": "Gilles KAHN a fait ses &eacute;tudes secondaires au lyc&eacute;e Louis-le-Grand, &agrave; Paris. Il a ensuite &eacute;tudi&eacute; &agrave; l'&Eacute;cole normale sup&eacute ;rieure de Saint-Cloud, o&ugrave; il a obtenu l'agr&eacute;gation de math&eacute;matiques. Il a ensuite obtenu un doctorat en informatique &agrave; l'universit&eacute; Paris VII."
+  },
+  {
+    "title": "La carri&egrave;re",
+    "content": "Gilles KAHN a commenc&eacute; sa carri&egrave;re en tant qu'enseignant-chercheur &agrave; l'&Eacute;cole normale sup&eacute;rieure de Saint-Cloud. Il a ensuite rejoint l'Institut national de recherche en informatique et en automatique (INRIA), o&ugrave; il a dirig&eacute; le projet d&eacute;veloppement de logiciels. Il a ensuite &eacute;t&eacute; nomm&eacute; directeur g&eacute;n&eacute;ral de l'INRIA en 1995. Il a &eacute;galement &eacute;t&eacute; pr&eacute;sident de l'Universit&eacute; Paris-Sud de 2007 &agrave; 2012."
+  },
+  {
+    "title": "Les travaux",
+    "content": "Gilles KAHN est connu pour ses travaux en informatique th&eacute;orique et en algorithmique. Il a notamment travaill&eacute; sur les langages de programmation, les syst&egrave;mes de bases de donn&eacute;es et les r&eacute;seaux de communication. Il a &eacute;galement contribu&eacute; &agrave; la cr&eacute;ation du langage de programmation OCaml."
+  },
+  {
+    "title": "Les distinctions",
+    "content": "Gilles KAHN a re&ccedil;u de nombreuses distinctions pour ses travaux, notamment la m&eacute;daille d'argent du CNRS en 1986 et le prix Blaise Pascal de l'Acad&eacute;mie des sciences en 1997. Il est &eacute;galement membre de l'Acad&eacute;mie des sciences depuis 1998."
   }
 ]
