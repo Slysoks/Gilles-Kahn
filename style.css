@@ -135,10 +135,10 @@ main {
     height: 1em;
     border-radius: 50%;
     opacity: .8;
+    filter: drop-shadow(0 0 0.5em var(--white));
     position: absolute;
     top: 50%;
     animation: dotScale 1s ease-out;
-    animation: dotAnimation 2s infinite;
   }
 
   &:nth-child(odd)::after {
@@ -179,14 +179,5 @@ footer {
   }
   60% {
     scale: 1.5;
-  }
-}
-
-@keyframes dotAnimation {
-  0%, 100% {
-    filter: drop-shadow(0 0 0.5em var(--white));
-  }
-  50% {
-    filter: drop-shadow(0 0 0.5em var(--black));
   }
 }
