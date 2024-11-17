@@ -16,6 +16,25 @@
 html, body {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar:hover {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--white);
+  border-radius: 20px;
 }
 
 body {
@@ -33,16 +52,19 @@ header {
   top: 0;
   backdrop-filter: blur(10px);
   z-index: 1000;
-  
-  > h1 {
-    text-align: center;
+
+  > div {
+    box-shadow: 0 0 3em 1em var(--gray);
     width: 75%;
+    text-align: center;
     margin: 0 auto;
     border-radius: 100px;
-    padding: 1em;
+    padding: 2em;
     background-color: #38384283;
   }
 }
+  
+  
 
 main {
   display: flex;
@@ -92,6 +114,9 @@ main {
 
     > p {
       line-height: 25px;
+      text-align: justify;
+      word-break: keep-all;
+      overflow-wrap: normal;
     }
   }
 
@@ -135,10 +160,10 @@ main {
     height: 1em;
     border-radius: 50%;
     opacity: .8;
+    filter: drop-shadow(0 0 0.5em var(--white));
     position: absolute;
     top: 50%;
     animation: dotScale 1s ease-out;
-    animation: dotAnimation 2s infinite;
   }
 
   &:nth-child(odd)::after {
@@ -179,14 +204,5 @@ footer {
   }
   60% {
     scale: 1.5;
-  }
-}
-
-@keyframes dotAnimation {
-  0%, 100% {
-    filter: drop-shadow(0 0 0.5em var(--white));
-  }
-  50% {
-    filter: drop-shadow(0 0 0.5em var(--black));
   }
 }
