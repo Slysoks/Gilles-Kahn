@@ -103,6 +103,7 @@ main {
     border-radius: var(--border-radius);
     padding: 1.5em;
     box-shadow: none;
+    z-index: 1000;
     transition: box-shadow 0.3s ease-out;
 
     &:hover {
@@ -180,7 +181,6 @@ main {
     transform-origin: right center;
   }
 }
-
 
 footer {
   width: 100%;
