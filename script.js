@@ -15,3 +15,18 @@ const data = fetch('./info.json')
       timeline.appendChild(div);
     })
   ));
+
+const body = document.querySelector('body');
+const cursor = document.getElementById('cursor');
+
+body.style.cursor = 'none';
+
+cursor.style.width = '60px';
+cursor.style.height = '60px';
+cursor.style.backgroundColor = 'var(--white)';
+borderRadius = '50%';
+
+body.addEventListener('mousemove', (e) => {
+  cursor.style.left = `${e.clientX}px`;
+  cursor.style.top = `${e.clientY}px`;
+});
