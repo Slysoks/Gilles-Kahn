@@ -1,10 +1,8 @@
 :root {
   --black: #191919;
-  --gray: #FFFFFF11;
-  --white: #F0F0F0;
-  --red: #750E21;
-  --orange: #E3651D;
-  --yellow: #BED754;
+  --gray: #ffffff11;
+  --white: #f0f0f0;
+  --link: #003566;
   --border-radius: 30px;
 }
 
@@ -13,10 +11,10 @@
   margin: 0;
 }
 
-html, body {
+html,
+body {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
-  user-select: none;
 }
 
 /* Custom Scrollbar */
@@ -60,11 +58,9 @@ header {
     margin: 0 auto;
     border-radius: 100px;
     padding: 2em;
-    background-color: #38384283;
+    background-color: #34343549;
   }
 }
-  
-  
 
 main {
   display: flex;
@@ -79,7 +75,7 @@ main {
   transform: translateY(5em);
 
   &::before {
-    content: '';
+    content: "";
     background-color: var(--white);
     width: 1.5em;
     height: 1.5em;
@@ -120,6 +116,53 @@ main {
       word-break: keep-all;
       overflow-wrap: normal;
     }
+
+    > .link {
+      position: relative;
+      width: fit-content;
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      text-decoration: none;
+      height: 1.2em;
+      padding-right: .75em;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 1.2em;
+        height: 1.2em;
+        border-radius: 1em;
+        top: 0;
+        left: 0;
+        background-color: var(--link);
+        filter: drop-shadow(0 0 0.5em var(--link));
+        transition: all 0.3s ease-out;
+        z-index: 999;
+      }
+
+      &:hover {
+        &::before {
+          width: 100%;
+          padding: .3em .1em;
+          transform: translateY(-0.3em);
+        }
+        > p {
+          color: var(--white);
+          margin-left: 0.75em;
+        }
+      }
+      
+      > p {
+        color: var(--white);
+        font-size: 1em;
+        margin-left: 2em;
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s ease-out;
+        z-index: 1000;
+      }
+    }
   }
 
   &:nth-child(odd) {
@@ -136,7 +179,7 @@ main {
 
   &:nth-child(odd)::before,
   &:nth-child(even)::before {
-    content: '';
+    content: "";
     background-color: var(--gray);
     width: 3em;
     height: 3px;
@@ -157,15 +200,15 @@ main {
 
   &:nth-child(odd)::after,
   &:nth-child(even)::after {
-    content: '';
+    content: "";
     background-color: var(--white);
     width: 1em;
     height: 1em;
     border-radius: 50%;
-    opacity: .8;
+    opacity: 0.8;
     filter: drop-shadow(0 0 0.5em var(--white));
     position: absolute;
-    top: 50%;
+    top: 0;
     animation: dotScale 1s ease-out;
   }
 
@@ -201,10 +244,13 @@ footer {
 }
 
 @keyframes dotScale {
-  0%, 100% {
-    scale: 1;
+  0%,
+  100% {
+    width: 1;
+    height: 1;
   }
   60% {
-    scale: 1.5;
+    width: 1.5em;
+    height: 1.5em;
   }
 }
