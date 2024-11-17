@@ -96,6 +96,7 @@ main {
   max-width: 34em;
   padding: 2em 0;
   position: relative;
+  z-index: 1000;
 
   > div {
     border: 2px solid var(--gray);
@@ -142,6 +143,7 @@ main {
     top: 50%;
     transform: translateY(-50%);
     animation: widthLinkChange 1s ease-out;
+    z-index: 999;
   }
 
   &:nth-child(odd)::before {
